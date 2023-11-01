@@ -5,7 +5,7 @@
     
 <p align="center">
   <samp>
-    #Techlead, Software architect and businnes promoter...
+    #Techlead, Software architect, Technical writer and businnes promoter...
   </samp>
 </p>
 
