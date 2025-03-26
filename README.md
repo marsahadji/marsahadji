@@ -9,6 +9,10 @@
   </samp>
 </p>
 
+## 📈 GitHub Stats
+
+![Rayane's GitHub stats](https://github-readme-stats.vercel.app/api?username=marsahadji&show_icons=true&theme=holi)
+
 - 🌱 I’m currently building **Solutions**
 
 - 💬 Ask me about **Tech, Business and Economics**
