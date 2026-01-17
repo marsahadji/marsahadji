@@ -1,67 +1,71 @@
 <h1 align="center">
-  <samp>
-    Hi 👋🏾, I'm Martial AHADJI (Mars)
-  </samp>
+  <br>
+  <samp>Hi 👋🏾, I'm Martial AHADJI</samp>
+  <br>
 </h1>
 
 <p align="center">
   <samp>
-    Tech Lead • Software Architect • Technical Writer • Business Builder
+    Tech Lead & Software Architect | Open Data Expert | Polyglot Developer
   </samp>
 </p>
 
 <p align="center">
-  <samp>
-    I design, build, and scale digital solutions — from concept to production.
-  </samp>
+  <i>Bridging the gap between high-performance systems, modern web architecture, and business strategy.</i>
 </p>
 
----
+<br>
 
-### 👨🏾‍💻 What I do
+### 👨🏾‍💻 About Me
 
-- 🧠 **Architect & Tech Lead**  
-  I design robust, scalable systems and lead technical execution.
+I am a **Software Architect** with a diverse background ranging from system-level programming to modern SaaS development. I specialize in building robust backends and scalable data architectures.
 
-- 🏗️ **Solution Builder**  
-  From MVPs to enterprise-grade platforms, I turn ideas into working products.
+* 🔭 I build high-performance applications using **C++ (Qt)** and modern web solutions with **Next.js**.
+* ⚙️ I have mastered **Backend Architecture** in **C#, Ruby, and PHP**.
+* 💾 I am a database expert, fluent in both **SQL** (PostgreSQL, MariaDB) and **NoSQL** (MongoDB).
+* 📊 I write about **Open Data** and explore **AI** for creative and business applications.
 
-- ✍🏾 **Technical Writer**  
-  I document systems, processes, and decisions clearly — for devs and non-devs.
+<br>
 
-- 🚀 **Business & Digital Transformation**  
-  I help organizations structure, digitalize, and optimize their operations.
+### 🛠 Tech Stack & Tools
 
----
+**Languages**
+<p align="left">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
+  <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+</p>
 
-### 🔧 Tech & Domains I work with
+**Frameworks & Platforms**
+<p align="left">
+  <img src="https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white" alt="Qt" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+</p>
 
-- Backend & APIs (Node.js, Express, REST)
-- Databases & Data Modeling (MongoDB, relational thinking)
-- DevOps & Architecture thinking
-- Business process digitalization
-- Tech strategy & system design
+**Databases (SQL & NoSQL)**
+<p align="left">
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" alt="MariaDB" />
+  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+</p>
 
-*(Tools change. Fundamentals don’t.)*
+<br>
 
----
+### 📫 Connect with me
 
-### 💬 Ask me about
-
-- Software architecture & system design  
-- Building tech products from scratch  
-- Digital transformation in emerging markets  
-- Tech, business & economics intersections  
-
----
-
-### 📫 Reach me
-
-- 📧 **mars@soltg.com**
-
----
-
-### 🌍 Connect with me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/marshadji)
-[![Twitter](https://img.shields.io/badge/X-blue.svg?style=for-the-badge&logo=twitter)](https://twitter.com/marsahadji)
+<p align="left">
+  <a href="https://www.linkedin.com/in/marshadji">
+    <img src="https://img.shields.io/badge/LinkedIn-blue.svg?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+  </a>
+  <a href="https://twitter.com/marsahadji">
+    <img src="https://img.shields.io/badge/Twitter-skyblue.svg?style=for-the-badge&logo=twitter&color=blue" alt="Twitter" />
+  </a>
+  <a href="mailto:mars@soltg.com">
+    <img src="
