@@ -21,7 +21,7 @@
 I am a **Software Architect** with a diverse background ranging from system-level programming to modern SaaS development. I specialize in building robust backends and scalable data architectures.
 
 * 🔭 I build high-performance applications using **C++ (Qt)** and modern web solutions with **Next.js**.
-* ⚙️ I have mastered **Backend Architecture** in **C#, Ruby, and PHP**.
+* ⚙️ I have mastered **Backend Architecture** in **JS/TS, Python, and PHP**.
 * 💾 I am a database expert, fluent in both **SQL** (PostgreSQL, MariaDB) and **NoSQL** (MongoDB).
 * 📊 I write about **Open Data** and explore **AI** for creative and business applications.
 
