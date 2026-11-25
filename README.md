@@ -43,127 +43,19 @@ This page shows what I've built and the range of roles I can fill, from code and
 
 ---
 
-## 🏗️ Systems I've designed
+## 🏗️ What I've built, and who it serves
 
-### 1. NotarIs: a multi-tenant workflow SaaS for notary offices
-`Next.js 16` `React 19` `TypeScript` `MongoDB/Mongoose` `NextAuth v5` `Zod` `TanStack Table` `Recharts` `Tailwind 4`
+<p align="center"><img src="assets/notaris.svg" width="100%" alt="NotarIs: notary case management, from first visit to signed deed" /></p>
 
-Notary offices run long procedures such as property sales or company creation. Each one is a chain of documents, payments, signatures and forms. I modeled it as a **template-driven workflow engine**: an office defines a procedure once, and every new case is created from that template.
+<p align="center"><img src="assets/africahome.svg" width="100%" alt="AfricaHome / TogoHome: certified property listings across West Africa" /></p>
 
-```mermaid
-flowchart TB
-    subgraph APP["Next.js App Router, split by route groups"]
-        MK["(marketing)<br/>public site"]
-        AU["(auth)<br/>login"]
-        DB["(dashboard)<br/>tenant workspace"]
-        AD["admin<br/>platform owner"]
-    end
-    PX["proxy.ts<br/>NextAuth session guard"] --> AU & DB & AD
-    DB --> SA["Server Actions"]
-    AD --> API["Route handlers<br/>/api/admin/*"]
-    SA & API --> ORM["Mongoose models"]
-    ORM --> M[("MongoDB")]
-    subgraph MODELS["Domain"]
-        O["Organization"] --- U["User · roles[]"]
-        O --- TPL["CaseTemplate"]
-        TPL -->|"instantiates"| CA["Case + WorkflowState"]
-        CA --- TK["Task"]
-        CA --- ACT["CaseActivity<br/>audit timeline"]
-        O --- SUB["Subscription / Invoice"]
-    end
-    ORM -.-> MODELS
-```
+<p align="center"><img src="assets/togoboissons.svg" width="100%" alt="TogoBoissons: ERP and point of sale for a drinks distribution depot" /></p>
 
-Each step has a **type** (`DOCUMENT · PAYMENT · SIGNATURE · FORM · INFO`), a config inherited from the template, its own runtime data, and a `isCritical` flag that blocks the next steps until it's done:
+<p align="center"><img src="assets/more-projects.svg" width="100%" alt="More projects: FactuPro, NecroTogo, LYC Informatique, school management, PEN-Togo, Smart Agro Africa" /></p>
 
-```mermaid
-stateDiagram-v2
-    [*] --> PENDING
-    PENDING --> IN_PROGRESS: clerk starts step
-    IN_PROGRESS --> REVIEW: proof uploaded (doc, payment, signature)
-    REVIEW --> COMPLETED: validated
-    REVIEW --> REJECTED: invalid proof
-    REJECTED --> IN_PROGRESS: resubmit
-    COMPLETED --> [*]
-    note right of REVIEW: a critical step blocks<br/>the rest of the case
-```
+### From the metal up: [cpp-qt-css_library](https://github.com/marsahadji/cpp-qt-css_library)
 
-The platform also has session-based multi-tenancy, a super-admin who can **impersonate** a tenant (with a visible banner), team invitations by email, and a system log.
-
----
-
-### 2. AfricaHome / TogoHome: a regional PropTech ecosystem (2019 → today)
-`V1 → V4` `SQL → MongoDB migration` `3 countries` `4 brands` `21-person team`
-
-I've been CTO since 2019. I took the platform from V1 to V4, moved it off a crashing legacy SQL database to MongoDB **with zero data loss**, and turned it into one shared core that serves several brands.
-
-```mermaid
-flowchart LR
-    subgraph CORE["Shared core (centralized backend)"]
-        BL["Business logic<br/>isolated from clients"]
-        DATA[("MongoDB")]
-        BL --- DATA
-    end
-    subgraph BRANDS["Brands: Togo · Côte d'Ivoire · Burkina Faso"]
-        TH["TogoHome"]
-        AH["AfricaHome"]
-        TW["Twins Digital"]
-        AB["AirBM"]
-    end
-    subgraph MODS["Modules"]
-        MP["Trust marketplace<br/>1,000+ certified listings"]
-        PM["Property management"]
-        PT["Construction / project tracking"]
-        AI["AI assistants"]
-        WA["WhatsApp API integration"]
-    end
-    BRANDS --> CORE
-    CORE --> MODS
-    NAT["📱 Lightweight native apps"] --> CORE
-```
-
----
-
-### 3. TogoBoissons: an ERP for a drinks distribution depot
-`Offline-tolerant` `Inventory` `Delivery routes` `Real-time accounting` `1,500+ sales in one month`
-
-This runs a real depot: stock, delivery rounds, cash and accounting. The constraint that shaped everything is that sales must continue during a power or network cut.
-
-```mermaid
-flowchart LR
-    POS["🧾 Point of sale<br/>& depot staff"] --> Q["Local operations<br/>(degraded mode)"]
-    Q -->|"sync when online"| API["Backend"]
-    API --> INV["Inventory"]
-    API --> RT["Delivery routes"]
-    API --> ACC["Accounting"]
-    INV & RT & ACC --> DB[("MongoDB")]
-    DB --> DASH["📊 Manager dashboard"]
-```
-
-Also shipped: **FactuPro** (B2B invoicing, 300+ invoices a month in production), **NecroTogo** (B2C payments and donations with a vendor marketplace), **LYC Informatique V2** (e-commerce with WhatsApp checkout, OTP and B2B proformas), plus a school-management app and a writers' association platform.
-
----
-
-### 4. From the metal up: my C++ / Qt toolkit
-[`cpp-qt-css_library`](https://github.com/marsahadji/cpp-qt-css_library) · `C++` `Qt5` `qmake subdirs` `shared libraries (.dll / .a)`
-
-Before the web, I built desktop business software in Qt. To avoid rewriting the same plumbing for every client, I split it into **separately compiled shared libraries** that every project linked against:
-
-```mermaid
-flowchart BT
-    CORE["CssCore<br/>Qt core includes, files, crypto, processes"]
-    SQL["CssSql<br/>DataConnect · MasterCrud"]
-    GUI["CssGui<br/>delegates, dialogs, models"]
-    NET["CssNetwork<br/>IP / subnet calculations"]
-    SPACE["CssSpace<br/>settings, validation, FCFA formatting, audit trail"]
-    CORE --> SQL
-    CORE --> SPACE
-    SQL --> SPACE
-    GUI --> SPACE
-    PRINT["CssPrint"] & CHARTS["CssCharts"] & MM["CssMultimedia"] & MATHS["CssMaths"]
-```
-
-The toolkit also includes local phone-number validation, FCFA money formatting, and an audit trail that logs every user action to the database.
+Before the web, I built desktop business software in **C++ and Qt** for local businesses. My reusable toolkit of shared libraries (database access, user interface, printing, charts, network calculations, FCFA money formatting, audit trails) let me deliver each new client faster.
 
 ---
 
