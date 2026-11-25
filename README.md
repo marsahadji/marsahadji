@@ -3,11 +3,11 @@
 </h1>
 
 <p align="center">
-  <samp>Software Architect · Tech Lead · Data Systems · Founder of CleanSoft Solutions</samp>
+  <samp>Software Architect · Data Expert · DBA · Ops · Builder · Founder of CleanSoft Solutions</samp>
 </p>
 
 <p align="center">
-  <i>From C++ memory management to multi-tenant SaaS: I design whole systems, write the code, and ship them to real users in West Africa.</i>
+  <i>From C++ memory management to multi-tenant SaaS: I design whole systems, build them, run them, and lead the people who deliver them.</i>
 </p>
 
 <p align="center">
@@ -22,47 +22,24 @@
 
 ## 🧭 Who I am, in one paragraph
 
-I started in **C/C++ and Qt**, writing desktop software where every byte of memory mattered. Since then I've built and run production systems for distributors, notaries, real-estate platforms, schools and associations in Togo and the region. I've led a team of 21 and migrated a live platform from SQL to MongoDB without losing a single record. These days I hold **50+ MongoDB certifications**, build on **Next.js 16 / React 19 / TypeScript**, drive coding agents with my own prompt framework, and write about **open data and African digital sovereignty**.
+I started in **C/C++ and Qt**, writing desktop software where every byte of memory mattered. Since then I've built and run production systems for distributors, notaries, real-estate platforms, schools and associations in Togo and the region. I've led a team of 21 and migrated a live platform from SQL to MongoDB without losing a single record. These days I hold **50+ MongoDB certifications**, build on **Next.js 16 / React 19 / TypeScript**, and write about **open data and African digital sovereignty**. Away from the keyboard, I also lead building construction projects, from structural design to site supervision.
 
-This page shows how I think, how I build, and how I draw systems before I code them.
+This page shows what I've built and the range of roles I can fill, from code and databases to operations and construction sites.
 
 ---
 
-## 🧠 How I think
+## 🎯 What I can take on
 
-| Principle | What it means in practice |
+| Role | What I bring |
 |---|---|
-| **The data model comes first** | I design schemas, relations and aggregation paths before any UI. Most bugs I've fixed in other people's code started as modeling mistakes. |
-| **Build for the real environment** | Power cuts and unstable networks are normal here. My systems keep working in degraded or offline mode and sync once the connection is back. |
-| **Server-first, type-safe** | Server Components by default. Server Actions for internal mutations. API routes only for webhooks and third parties. Zod at every boundary. |
-| **Boring beats clever** | Singleton DB connections, explicit enums, predictable folder layouts. The next developer should understand the code in minutes. |
-| **Go on site** | Before I write a spec, I sit with the operators who will use the system: depot managers, notary clerks, accountants. |
-
----
-
-## 🛰️ How I work with AI agents: the "Control Room"
-
-I don't "vibe code". I run coding agents like a small engineering team, with an architect, written rules and small checked deliveries. The method is published as a reusable prompt library in [**templatex**](https://github.com/marsahadji/templatex).
-
-```mermaid
-flowchart LR
-    A["🧑🏾‍💻 Architect chat<br/>(me + planning AI)"] -->|"small YAML prompt<br/>≤ 7 tasks"| T["task.md"]
-    subgraph CR["📁 Control files (kept lean)"]
-        R["rules.md<br/>strict minimum"]
-        S["ai_summary.md<br/>project state"]
-        C["checkpoint.md<br/>≤ 15 lines"]
-    end
-    T --> AG["🤖 Coding agent"]
-    R --> AG
-    S --> AG
-    AG -->|"report + diff"| RV{"Review"}
-    RV -->|"approved"| M["✅ Merge"]
-    RV -->|"fix needed"| A
-    M --> C
-    C --> A
-```
-
-**Rules I enforce:** one purpose per prompt, outline approved before the full prompt, the agent reads only what it needs, no tests that add nothing. This keeps token use low and makes the output predictable.
+| 🏛️ **Software Architect** | End-to-end system design: multi-tenant SaaS, ERPs, marketplaces, multi-country platforms. Took a production platform from V1 to V4. |
+| 🗄️ **Database Administrator** | 50+ MongoDB certifications. Replication, sharding, indexing, performance tuning, backup & recovery, and live SQL → NoSQL migrations with zero data loss. |
+| 📊 **Data Expert** | Data modeling, aggregation pipelines, analytics dashboards, data governance and open data. |
+| 👨🏾‍💻 **Full-Stack Developer** | Next.js 16, React 19, TypeScript, Node.js on the web; C/C++ and Qt on the desktop. |
+| ⚙️ **DevOps / Ops Manager** | Self-hosted VPS infrastructure (Coolify, Docker, Ubuntu), deployments, monitoring, high availability, and systems that keep running through power and network cuts. |
+| 🧑🏾‍✈️ **Tech Lead / CTO** | Led a team of 21 (15 internal, 6 contractors), mentored junior developers, and aligned product with investors. |
+| 🏗️ **Construction Project Lead** | Site supervision, coordination of tradespeople, quote consolidation, and structural design work such as concrete staircases and water-tower supports. |
+| 🎓 **Trainer & Writer** | Data training programs, technical publications, and a practical guide to OHADA business law. |
 
 ---
 
@@ -186,25 +163,7 @@ flowchart BT
     PRINT["CssPrint"] & CHARTS["CssCharts"] & MM["CssMultimedia"] & MATHS["CssMaths"]
 ```
 
-A small generic CRUD layer over `QSqlQuery`, so business code never builds SQL strings by hand:
-
-```cpp
-namespace CssSql {
-struct crudElt { QString field; QVariant value; };
-
-class MasterCrud {
-public:
-    explicit MasterCrud(QString table);
-    QSqlQuery readValue(crudElt e);
-    bool insertValue(QList<crudElt> l);
-    bool updateValue(QList<crudElt> l);
-    bool deleteValue(crudElt e);
-    static bool checkPresence(QString t, crudElt e);
-};
-}
-```
-
-It also has regex validators for local phone numbers, money formatting in FCFA, and an `actionWriter()` that logs every user action to the database. I was building audit trails long before NotarIs.
+The toolkit also includes local phone-number validation, FCFA money formatting, and an audit trail that logs every user action to the database.
 
 ---
 
